@@ -1,15 +1,13 @@
 #!/bin/sh
 
 clear
-password="YourPasswordHere"
-username="YourUsernameHere"
+read -p "Enter the desired username: " username
+read -s -p "Enter the password for $username: " password
 
 keyboardlayout="de-latin1"
 zoneinfo="Europe/Berlin"
 country="Germany"
 hostname="archsys"
-username="xyz"
-
 
 # ------------------------------------------------------
 # Set System Time
@@ -81,7 +79,7 @@ grub-mkconfig -o /boot/grub/grub.cfg
 useradd -m $username
 echo "$username:$password" | chpasswd
 
-echo "ermanno ALL=(ALL) ALL" >> /etc/sudoers.d/ermanno
+echo "$username ALL=(ALL) ALL" >> /etc/sudoers.d/$username
 
 # ------------------------------------------------------
 # Enable Services
