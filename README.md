@@ -3,26 +3,26 @@
 
 ## Steps to follow:
 ```
-# Load keyboard layout 
+1. Load keyboard layout 
 loadkeys de-latin1
 ```
 
-1. Check connection
+2. Check connection
 ```
 ping google.com
 ```
 
-2. Check if BIOS or UEFI (if you get output that means you are of UEFI else BIOS)
+3. Check if BIOS or UEFI (if you get output that means you are of UEFI else BIOS)
 ```
 ls /sys/firmware/efi/efivars # check if uefi mode is enabled
 ```
 
-3. Check partitions
+4. Check partitions
 ```
 lsblk
 ```
 
-4. Create partitions
+5. Create partitions
 ```
 fdsk /dev/sda
 
@@ -32,30 +32,28 @@ n # create new partition
 w # to write
 ```
 
-5. Sync package
+6. Sync package
 ```
 pacman -Syy
 ```
 
-6. Update keyring just in case
+7. Update keyring just in case
 ```
 pacman -S archlinux-keyring
 pacman -Syy
 ```
 
-7. Install git
+8. Install git
 ```
 pacman -S git
 ```
 
-8. Clone the repo
+9. Clone the repo
 ```
 git clone https://github.com/xyroton/arch-install-public
 ```
 
-9. Run the install script
+10. Run the install script
 ```
 ./1-install.sh
-```
-
 ```
