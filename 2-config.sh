@@ -69,7 +69,7 @@ pacman -Syy
 # ------------------------------------------------------
 # Install Packages
 # ------------------------------------------------------
-pacman -S grub xdg-desktop-portal-wlr efibootmgr networkmanager \
+pacman --noconfirm -S grub xdg-desktop-portal-wlr efibootmgr networkmanager \
   network-manager-applet dialog wpa_supplicant mtools dosfstools \
   base-devel linux-headers avahi xdg-user-dirs xdg-utils gvfs \
   gvfs-smb nfs-utils inetutils dnsutils bluez bluez-utils cups hplip \
