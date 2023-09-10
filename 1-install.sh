@@ -49,6 +49,7 @@ cat /mnt/etc/fstab
 # ------------------------------------------------------
 mkdir /mnt/archinstall
 cp 2-config.sh /mnt/archinstall/
+cp 3-guisetup.sh /mnt/archinstall/
 
 # ------------------------------------------------------
 # Chroot to installed sytem
