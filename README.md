@@ -66,7 +66,7 @@ Exit, unmount and poweroff
 ```
 exit
 umount -a # or umount -l /mnt
-poweroff
+poweroff # or shutdown now
 ```
 
 
