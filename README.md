@@ -17,12 +17,12 @@ ping google.com
 ls /sys/firmware/efi/efivars # check if uefi mode is enabled
 ```
 
-# Check partitions
+3. Check partitions
 ```
 lsblk
 ```
 
-# Create partitions
+4. Create partitions
 ```
 fdsk /dev/sda
 
@@ -32,28 +32,28 @@ n # create new partition
 w # to write
 ```
 
-# Sync package
+5. Sync package
 ```
 pacman -Syy
 ```
 
-# Update keyring just in case
+6. Update keyring just in case
 ```
 pacman -S archlinux-keyring
 pacman -Syy
 ```
 
-# Install git
+7. Install git
 ```
 pacman -S git
 ```
 
-# Clone the repo
+8. Clone the repo
 ```
 git clone https://github.com/xyroton/arch-install-public
 ```
 
-# Run the install script
+9. Run the install script
 ```
 ./1-install.sh
 ```
