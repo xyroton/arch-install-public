@@ -2,8 +2,8 @@
 > Simple stuff to speed the arch install up a little.
 
 ## Steps to follow:
-```
 1. Load keyboard layout 
+```
 loadkeys de-latin1
 ```
 
