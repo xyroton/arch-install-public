@@ -1,5 +1,12 @@
 #!/bin/sh
 
+echo " ██████  ██████  ███    ██ ███████ ██  ██████  "
+echo "██      ██    ██ ████   ██ ██      ██ ██        "
+echo "██      ██    ██ ██ ██  ██ █████   ██ ██   ███  "
+echo "██      ██    ██ ██  ██ ██ ██      ██ ██    ██  "
+echo " ██████  ██████  ██   ████ ██      ██  ██████   "
+echo ""
+
 clear
 read -p "Enter the desired username: " username
 read -s -p "Enter the password for root and $username: " password
