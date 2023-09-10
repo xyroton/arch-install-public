@@ -1,7 +1,7 @@
 # arch-install-public
 > Simple stuff to speed the arch install up a little.
 
-## Steps to follow:
+## Base steps to follow:
 1. Load keyboard layout 
 ```
 loadkeys de-latin1
@@ -57,3 +57,16 @@ git clone https://github.com/xyroton/arch-install-public
 ```
 ./1-install.sh
 ```
+## (OPTIONAL) Run the following scipt if you wish to set up a DE(XFCE4) and QTILE
+```
+./3-guisetup.sh
+```
+## Final Part
+Exit, unmount and poweroff
+```
+exit
+umount -a # or umount -l /mnt
+poweroff
+```
+
+
