@@ -1,6 +1,7 @@
 !#/bin/sh
 
 clear
+echo ""
 echo " █████  ██████   ██████ ██   ██ ██ ███    ██ ███████ ████████  █████  ██      ██      "
 echo "██   ██ ██   ██ ██      ██   ██ ██ ████   ██ ██         ██    ██   ██ ██      ██      "
 echo "███████ ██████  ██      ███████ ██ ██ ██  ██ ███████    ██    ███████ ██      ██      "
@@ -54,4 +55,5 @@ cp 3-guisetup.sh /mnt/archinstall/
 # ------------------------------------------------------
 # Chroot to installed sytem
 # ------------------------------------------------------
-arch-chroot /mnt ./archinstall/2-config.sh
+arch-chroot /mnt 
+./archinstall/2-config.sh

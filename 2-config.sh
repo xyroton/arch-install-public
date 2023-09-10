@@ -1,6 +1,7 @@
 #!/bin/sh
 
 clear
+echo ""
 echo " ██████  ██████  ███    ██ ███████ ██  ██████  "
 echo "██      ██    ██ ████   ██ ██      ██ ██        "
 echo "██      ██    ██ ██ ██  ██ █████   ██ ██   ███  "
@@ -59,7 +60,7 @@ echo "KEYMAP=$keyboardlayout" >> /etc/vconsole.conf
 # Update reflector
 # ------------------------------------------------------
 echo "Start reflector..."
-reflector --country $country --age 6 --sort rate --save /etc/pacman.d/mirrorlist
+reflector -c $country -p https -a 3 --sort rate --save /etc/pacman.d/mirrorlist
 
 # ------------------------------------------------------
 # Synchronize mirrors
@@ -125,11 +126,13 @@ systemctl enable acpid
 # Finished
 # ------------------------------------------------------
 clear
+echo ""
 echo "███████ ██ ███    ██ ██ ███████ ██   ██ ███████ ██████  "
 echo "██      ██ ████   ██ ██ ██      ██   ██ ██      ██   ██ "
 echo "█████   ██ ██ ██  ██ ██ ███████ ███████ █████   ██   ██ "
 echo "██      ██ ██  ██ ██ ██      ██ ██   ██ ██      ██   ██ "
 echo "██      ██ ██   ████ ██ ███████ ██   ██ ███████ ██████  "
+echo ""
 
 echo " Type: 'exit', 'umount -a', 'poweroff'!"
 echo ""
