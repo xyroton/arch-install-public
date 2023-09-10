@@ -2,12 +2,12 @@
 
 clear
 read -p "Enter the desired username: " username
-read -s -p "Enter the password for $username: " password
+read -s -p "Enter the password for root and $username: " password
 
 keyboardlayout="de-latin1"
 zoneinfo="Europe/Berlin"
 country="Germany"
-hostname="archsys"
+hostname="archlinux"
 
 # ------------------------------------------------------
 # Set System Time
