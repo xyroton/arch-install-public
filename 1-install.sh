@@ -14,7 +14,8 @@ echo ""
 # Enter partition names
 # ------------------------------------------------------
 lsblk
-read -p "Enter the name of the ROOT partition (eg. sda1): " sda1
+read -p "Enter the name of the ROOT partition (eg. sda2): " root_part
+read -p "Enter the name of the SWAP partition (eg. sda1): " swap_part
 
 
 # ------------------------------------------------------
@@ -25,12 +26,24 @@ timedatectl set-ntp true
 # ------------------------------------------------------
 # Format partitions
 # ------------------------------------------------------
-mkfs.ext4 /dev/sda1
+mkfs.ext4 /dev/$root_part
+mkswap /dev/$swap_part
+
+# ------------------------------------------------------
+# Activate swap
+# ------------------------------------------------------
+swapon /dev/$swap_part
 
 # ------------------------------------------------------
 # Mount points
 # ------------------------------------------------------
-mount /dev/sda1 /mnt
+mount /dev/$root_part /mnt
+
+# ------------------------------------------------------
+# Check mount points
+# ------------------------------------------------------
+lsblk
+sleep 5
 
 # ------------------------------------------------------
 # Install base packages
@@ -55,5 +68,4 @@ cp 3-guisetup.sh /mnt/archinstall/
 # ------------------------------------------------------
 # Chroot to installed sytem
 # ------------------------------------------------------
-arch-chroot /mnt 
-./archinstall/2-config.sh
+arch-chroot /mnt ./archinstall/2-config.sh

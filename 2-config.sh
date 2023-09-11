@@ -78,9 +78,9 @@ pacman --noconfirm -S grub xdg-desktop-portal-wlr efibootmgr networkmanager \
   bash-completion openssh rsync reflector acpi acpi_call dnsmasq \
   openbsd-netcat ipset firewalld flatpak sof-firmware nss-mdns acpid \
   os-prober ntfs-3g terminus-font exa bat htop zip unzip \
-  neofetch duf xorg xorg-xinit xclip grub-btrfs intel-ucode \
+  neofetch duf xorg xorg-xinit xclip intel-ucode \
   xf86-video-nouveau xf86-video-intel xf86-video-qxl \
-  pacman-contrib inxi man
+  pacman-contrib inxi man-db
 
 
 # ------------------------------------------------------
@@ -97,7 +97,6 @@ clear
 # ------------------------------------------------------
 # set up grub
 # ------------------------------------------------------
-pacman -S grub
 grub-install /dev/sda
 grub-mkconfig -o /boot/grub/grub.cfg
 
