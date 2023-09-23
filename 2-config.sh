@@ -19,6 +19,8 @@ echo ""
 read -s -p "Confirm the password: " password_confirm
 echo ""
 echo "------------------------------------------------------"
+lsblk
+read -p "Enter the name of the drive (eg. sda): " drive_name
 
 # ------------------------------------------------------
 # Check if the passwords match
@@ -97,7 +99,7 @@ clear
 # ------------------------------------------------------
 # set up grub
 # ------------------------------------------------------
-grub-install /dev/sda
+grub-install /dev/$drive_name
 grub-mkconfig -o /boot/grub/grub.cfg
 
 # ------------------------------------------------------
